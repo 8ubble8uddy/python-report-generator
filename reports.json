@@ -1,0 +1,8 @@
+{
+  "performance": {
+    "name": "Cредняя эффективность (среднее арифметическое по колонке performance)",
+    "description": "Отчёт показывает среднюю эффективность сотрудников по позициям",
+    "ddl": "data/create_employees.sql",
+    "sql": "data/performance_report.sql"
+  }
+}
