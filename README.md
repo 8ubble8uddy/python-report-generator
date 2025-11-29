@@ -33,7 +33,7 @@ python main.py --files data/employees1.csv data/employees2.csv --report performa
 ```
 Чтобы запустить тесты, нужно выполнить следующую команду
 ```
-pytest
+pytest --cov=lib --cov=main
 ```
 
 ### **Как добавить новый отчёт:**
