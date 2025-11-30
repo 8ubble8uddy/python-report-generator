@@ -1,4 +1,4 @@
-CREATE TABLE table_name (
+CREATE TABLE report_table (
     name TEXT,
     position TEXT,
     completed_tasks INTEGER,

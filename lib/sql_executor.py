@@ -3,7 +3,7 @@ import sqlite3
 
 
 class SQLExecutor:
-    TABLE_NAME = 'table_name'
+    TABLE_NAME = 'report_table'
 
     def __init__(self, connection: sqlite3.Connection):
         self.conn = connection
@@ -24,7 +24,7 @@ class SQLExecutor:
             self.conn.executescript(ddl_sql)
 
             if not self._check_table_exists():
-                raise ValueError("Название таблицы в параметре 'ddl' должно быть только 'table_name'")
+                raise ValueError("Название таблицы в параметре 'ddl' должно быть только 'report_table'")
 
         except sqlite3.Error as e:
             raise RuntimeError(f"""

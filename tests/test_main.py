@@ -18,7 +18,7 @@ def test_full_cli_run(tmp_path):
 
     ddl = tmp_path / 'ddl.sql'
     ddl.write_text("""
-        CREATE TABLE table_name (
+        CREATE TABLE report_table (
             name TEXT,
             position TEXT,
             completed_tasks INTEGER,
@@ -31,7 +31,7 @@ def test_full_cli_run(tmp_path):
     sql = tmp_path / 'report.sql'
     sql.write_text("""
         SELECT position, AVG(performance) as performance
-        FROM table_name
+        FROM report_table
         GROUP BY position
         ORDER BY performance DESC;
     """)
