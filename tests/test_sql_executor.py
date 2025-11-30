@@ -6,7 +6,7 @@ def test_full_sql_flow():
     conn = sqlite3.connect(':memory:')
     executor = SQLExecutor(conn)
     ddl = """
-        CREATE TABLE performance (
+        CREATE TABLE table_name (
             position TEXT,
             performance REAL);
     """
@@ -22,7 +22,7 @@ def test_full_sql_flow():
     executor.insert_data('performance', headers, rows, 'file.csv')
     sql = """
         SELECT position, AVG(performance) as performance
-        FROM performance
+        FROM table_name
         GROUP BY position
         ORDER BY performance DESC;
     """

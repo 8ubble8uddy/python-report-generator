@@ -1,4 +1,4 @@
-CREATE TABLE performance (
+CREATE TABLE table_name (
     name TEXT,
     position TEXT,
     completed_tasks INTEGER,
